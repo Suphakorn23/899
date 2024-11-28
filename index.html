@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .header {
+            padding: 20px;
+            background-color: #1e88e5;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .movies-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .movie-card {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+        .movie-card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .movie-card p {
+            font-size: 16px;
+            margin: 10px;
+            color: #ddd;
+        }
+        .trailer-btn {
+            display: inline-block;
+            background-color: #e53935;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+        }
+        .trailer-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>เทเลทับบี้</h1>
+    </div>
+    <div class="movies-container">
+        <!-- Card 1 -->
+        <div class="movie-card">
+            <img src="https://cdn.pixabay.com/photo/2023/09/13/07/29/ghost-8250317_640.png" alt="Movie Poster">
+            <h3>Movie Title 1</h3>
+            <p>Action | Adventure | 2024</p>
+            <a href="https://youtu.be/Z9RaKMvocMA?si=2a7D8PKBFBCyB94f" target="_blank" class="trailer-btn">Watch Trailer</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="movie-card">
+            <img src="data:image/jpeg;base64,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" alt="Movie Poster">
+            <h3>Movie Title 2</h3>
+            <p>Comedy | Drama | 2023</p>
+            <a href="https://www.youtube.com/live/ji3kiXYE1_k?si=FlMKHvKLBcS2JJ-1" target="_blank" class="trailer-btn">Watch Trailer</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="movie-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0T5hK04wzV4FTdcBNcDTUH36xJbsQFuDjNQ&s" alt="Movie Poster">
+            <h3>Movie Title 3</h3>
+            <p>Horror | Thriller | 2022</p>
+            <a href="https://youtu.be/WOqrfzJo2MY?si=r996_gL1eF_nBdg5" target="_blank" class="trailer-btn">Watch Trailer</a>
+        </div>
+    </div>
+</body>
+</html>
